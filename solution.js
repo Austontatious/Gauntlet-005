@@ -1,13 +1,14 @@
 export function solve(lines) {
   const seen = new Set();
-  const result = [];
+  const out = [];
 
-  for (const line of lines) {
-    if (!seen.has(line)) {
-      seen.add(line);
-      result.push(line);
+  for (let i = 0; i < lines.length; i += 1) {
+    const value = lines[i];
+    if (!seen.has(value)) {
+      seen.add(value);
+      out.push(value);
     }
   }
 
-  return result;
+  return out;
 }
